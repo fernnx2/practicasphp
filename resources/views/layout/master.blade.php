@@ -12,7 +12,8 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    {{url('/assets/bootstrap/css/bootstrap.min.css')}}
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+   
   </head>
 
   <body>
@@ -26,7 +27,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    {{url('/assets/bootstrap/js/bootstrap.min.js')}}
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
    
   </body>
 </html>

@@ -21,8 +21,8 @@ Route::controllers([
 ]);
 
 //Rutas Ejercicio Modulo 1
-Route::get('index', function(){
-	echo "Pantalla Principal";
+Route::get('principal', function(){
+	return view('principal');
 });
 
 Route::get('login', function(){
@@ -34,11 +34,11 @@ Route::get('logaut', function(){
 });
 
 Route::get('catalog', function(){
-	echo "Listado de Peliculas";
+	return view('catalog.index');
 });
 
 Route::get('catalog/show/{id}', function($id){
-	echo "Vista detalle con el id : " . $id;
+	return view('catalog.show', array('id'=>$id));
 });
 
 Route::get('catalog/create', function(){
