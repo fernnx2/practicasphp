@@ -227,7 +227,7 @@ class CatalogController extends Controller {
 	 */
 	public function getEdit($id)
 	{
-		return view('catalog.edit', array('id'=>$id));
+		return view('catalog.edit', ['pelicula' => $this->arrayPeliculas[$id]]);
 	}
 
 	/**
