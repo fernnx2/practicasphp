@@ -21,9 +21,7 @@ Route::controllers([
 ]);
 
 //Rutas Ejercicio Modulo 1
-Route::get('principal', function(){
-	return view('principal');
-});
+Route::get('principal','PrincipalController@getHome');
 
 Route::get('login', function(){
 	echo "Login de Usuario";
@@ -33,18 +31,10 @@ Route::get('logaut', function(){
 	echo "Logaut de usuario";
 });
 
-Route::get('catalog', function(){
-	return view('catalog.index');
-});
+Route::get('catalog','CatalogController@getIndex');
 
-Route::get('catalog/show/{id}', function($id){
-	return view('catalog.show', array('id'=>$id));
-});
+Route::get('catalog/show/{id}', 'CatalogController@getShow');
 
-Route::get('catalog/create', function(){
-	echo "Formulario para añadir pelicula";
-});
+Route::get('catalog/create','CatalogController@getCreate');
 
-Route::get('catalog/edit/{id}', function($id){
-	echo "Modificar Pelicula con id :" . $id;
-});
+Route::get('catalog/edit/{id}','CatalogController@getEdit');
