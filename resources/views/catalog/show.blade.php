@@ -23,7 +23,7 @@
          <button class="btn btn-default btn-primary " >Alquilar Pelicula</button>
          @endif
          
-         <a href="{{ url('catalog/edit/')}}" class="btn btn-default btn-warning">Editar Pelicula</a>
+         <a href="{{ url('catalog/edit/' . $pelicula->id)}}" class="btn btn-default btn-warning">Editar Pelicula</a>
          <a href="/catalog" class="btn btn-default btn-info">Volver</a>
          
 
