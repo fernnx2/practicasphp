@@ -36,7 +36,28 @@ class CatalogController extends Controller {
 	 */
 	public function getCreate()
 	{
-		echo view('catalog.create');
+		
+		return view('catalog.create');
+	}
+
+	public function postCreate(Request $request){
+		$movie = new Movie();
+		if($request->has('title') && $request->has('year') && $request->has('director')
+		 && $request->has('poster') && $request->has('synopsis')
+		)
+		{
+		$movie->title = $request->title;
+		$movie->year = $request->year;
+		$movie->director = $request->director;
+		$movie->poster = $request->poster;
+		$movie->synopsis = $request->synopsis;
+		$movie->save();
+		return redirect('/catalog');
+		}
+		else{
+		return redirect('/home');
+		}
+		
 	}
 
 	/**
@@ -71,6 +92,19 @@ class CatalogController extends Controller {
 	{
 		$arrayPeliculas = Movie::findOrFail($id);
 		return view('catalog.edit', ['pelicula' => $arrayPeliculas]);
+	}
+
+	public function postEdit(Request $request, $id){
+		$movie = new Movie();
+		$movie = Movie::find($id);
+		$movie->title = $request->title;
+		$movie->year = $request->year;
+		$movie->director = $request->director;
+		$movie->poster = $request->poster;
+		$movie->synopsis = $request->synopsis;
+		$movie->save();
+		return redirect('/catalog/show/' . $id);
+		
 	}
 
 	/**

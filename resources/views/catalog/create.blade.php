@@ -9,7 +9,7 @@
          <div class="card-body" style="padding:30px">
 
             {{-- TODO: Abrir el formulario e indicar el método POST --}}
-        <form action="" method="post">
+        <form action="/catalog/create" method="post">
             {{-- TODO: Protección contra CSRF --}}
 
             <div class="form-group">
@@ -19,8 +19,8 @@
 
             <div class="form-group">
                {{-- TODO: Completa el input para el año --}}
-               <label for="año">Año</label>
-               <input type="text" name="año" id="año" class="form-control">
+               <label for="year">Año</label>
+               <input type="text" name="year" id="year" class="form-control">
             </div>
 
             <div class="form-group">
