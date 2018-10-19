@@ -1,3 +1,10 @@
+##Proyecto de Publicacion de peliculas.
+Fase beta, es una practica para las nociones basicas en Laravel
+Actualmente esta en fase beta, utilizando rutas, controladores y vistas.
+
+
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
